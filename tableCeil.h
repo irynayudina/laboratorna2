@@ -1,13 +1,14 @@
 #pragma once
 #include <iostream>
 #include <fstream>
+#include "sheet.h"
 using namespace std;
-class tableCeil
+class tableCeil : public sheet
 {
-protected:
-	char* name = NULL;
-	int name_length;
-	bool protection;
+//protected:
+//	char* name = NULL;
+//	int name_length;
+//	bool protection;
 private:
 	char* content = NULL;
 	int content_length;	
