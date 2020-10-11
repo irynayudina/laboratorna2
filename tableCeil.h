@@ -4,12 +4,13 @@
 using namespace std;
 class tableCeil
 {
-private:
+protected:
 	char* name = NULL;
 	int name_length;
-	char* content = NULL;
-	int content_length;
 	bool protection;
+private:
+	char* content = NULL;
+	int content_length;	
 public:
 
 	tableCeil(void)
