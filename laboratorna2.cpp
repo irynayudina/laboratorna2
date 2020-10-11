@@ -4,6 +4,7 @@
 #include <iostream>
 using namespace std;
 #include "tableCeil.h"
+#include "ceil_array_2d.h"
 class a { public: int aint; };
                 class b :public a { public: a array; };
 
@@ -14,7 +15,9 @@ int main()
     tableCeil cRestored;
     std::cout << "Hello World!\n";
     cRestored.get_from_the_disk();
-    cout << cRestored.get_name_length();
+    cout << cRestored << endl;
+    ceil_array_2d ce;
+    ce(1,2);
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"

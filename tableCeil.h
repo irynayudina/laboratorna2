@@ -58,7 +58,6 @@ public:
 		this->name_length = other.name_length;
 	}
 	~tableCeil() { delete[] name; delete[] content; }
-	tableCeil& operator[](const tableCeil& c) {}//no idea wtf
 	tableCeil& operator=(const tableCeil& other)
 	{
 		this->protection = other.protection;
@@ -81,7 +80,7 @@ public:
 		return *this;
 	}
 	friend ostream& operator<< (ostream& out, const tableCeil& point);
-	friend istream& operator>> (istream& out, const tableCeil& point);
+	friend istream& operator>> (istream& out,  tableCeil& point);
 	
 	void save_to_the_disk() 
 	{

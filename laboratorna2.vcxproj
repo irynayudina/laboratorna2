@@ -147,13 +147,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ceil_array_2d.cpp" />
     <ClCompile Include="laboratorna2.cpp" />
     <ClCompile Include="sheet.cpp" />
+    <ClCompile Include="sheet_array_1d.cpp" />
     <ClCompile Include="tableBook.cpp" />
     <ClCompile Include="tableCeil.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ceil_array_2d.h" />
     <ClInclude Include="sheet.h" />
+    <ClInclude Include="sheet_array_1d.h" />
     <ClInclude Include="tableBook.h" />
     <ClInclude Include="tableCeil.h" />
   </ItemGroup>
