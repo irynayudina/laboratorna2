@@ -1,12 +1,12 @@
 #pragma once
 #include "sheet.h"
+#include<fstream>
 class tableBook 
 {
 protected:
 	char* name = NULL;
 	int name_length;
 	bool protection;
-private:
 	sheet* content = NULL;
 	int content_length;
 public:
@@ -19,7 +19,7 @@ public:
 		name[2] = 'o';
 		name[3] = 'k';
 		name[4] = '1';
-		content = new sheet_array_1d[1];
+		content = new sheet[1];
 		content_length = 1;
 		//for (int i = 0; i < content_length; i++) {
 		//	//content[i] = '0';

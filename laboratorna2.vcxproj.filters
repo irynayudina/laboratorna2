@@ -30,9 +30,6 @@
     <ClCompile Include="ceil_array_2d.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="sheet_array_1d.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="tableCeil.h">
@@ -45,9 +42,6 @@
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="ceil_array_2d.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="sheet_array_1d.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

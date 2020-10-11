@@ -2,73 +2,68 @@
 #include "tableCeil.h"
 class ceil_array_2d {
 private:
-    int rows_, cols_;
+    int cols_;
     tableCeil* data_;
 public:
     ceil_array_2d()
     {
-        rows_ = 100;
+       
         cols_ = 100;
-        if (rows_ == 0 || cols_ == 0)
+        if ( cols_ == 0)
         {
             throw exception("Matrix constructor has 0 size");
         }
-        data_ = new tableCeil[rows_ * cols_];
+        data_ = new tableCeil[ cols_];
     }
     ceil_array_2d(int rows, int cols) 
     {
-        rows_ = rows;
+        
         cols_ = cols;
-        if (rows == 0 || cols == 0)
+        if ( cols == 0)
         {
             throw exception("Matrix constructor has 0 size");
         }
-        data_ = new tableCeil[rows * cols];
+        data_ = new tableCeil[ cols];
     }
     ~ceil_array_2d()
     {
         delete[] data_;
     }
-    tableCeil& operator() (unsigned row, unsigned col) 
+    tableCeil& operator[] ( unsigned col) 
     {
-        if (row >= rows_ || col >= cols_)
+        if (col >= cols_)
             throw exception("Matrix subscript out of bounds");
-        return data_[cols_ * row + col];
+        return data_[col];
     }        // Subscript operators often come in pairs
-    tableCeil  operator() (unsigned row, unsigned col) const
+    tableCeil  operator[] (unsigned col) const
     {
-        if (row >= rows_ || col >= cols_)
+        if ( col >= cols_)
             throw exception("const Matrix subscript out of bounds");
-        return data_[cols_ * row + col];
+        return data_[ col];
     }// Subscript operators often come in pairs
     ceil_array_2d(const ceil_array_2d& m) 
     {
-        this->rows_ = m.rows_;
         this->cols_ = m.cols_;
         if (this->data_ != NULL) {
             delete[] this->data_;
         }
-        this->data_ = new tableCeil[rows_ * cols_];
-        for (int i = 0; i < rows_; i++) {
+        this->data_ = new tableCeil[ cols_];
             for (int j = 0; j < cols_; j++)
             {
-                this->data_[i, j] = m.data_[i, j];
+                this->data_[ j] = m.data_[ j];
             } 
-        }
+        
     } 
     ceil_array_2d& operator= (const ceil_array_2d& m) 
     {
-        this->rows_ = m.rows_;
         this->cols_ = m.cols_;
         if (this->data_ != NULL) {
             delete[] this->data_;
         }
-        this->data_ = new tableCeil[rows_ * cols_];
-        for (int i = 0; i < rows_; i++) {
-            for (int j = 0; j < cols_; j++)
-            {
-                this->data_[i, j] = m.data_[i, j];
-            }
+        this->data_ = new tableCeil[cols_];
+        for (int j = 0; j < cols_; j++)
+        {
+            this->data_[j] = m.data_[j];
         }
         return *this;
     }

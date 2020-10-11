@@ -4,7 +4,10 @@
 class sheet :
 	public tableBook
 {
-private:
+protected:
+	char* name = NULL;
+	int name_length;
+	bool protection;
 	ceil_array_2d* content = NULL;
 	int content_length;
 public:
